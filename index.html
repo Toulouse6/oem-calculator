@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8, user-scalable=no">
+    <title>UVeye ROI Calculator</title>
+    <link rel="icon" type="image/png" sizes="30x30" href="assets/logo-favicon.png">
+
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-overlay"></div>
+    
+    <div id="calculator-body">
+        <form id="calculatorForm">
+
+            <h1>Get Your ROI estimation from UVeye</h1>
+            <h2>within 60 seconds</h2>
+
+            <!-- Opening stage -->
+            <div class="step" data-step="0">
+                <h3 class="sub-title">Discover how UVeye's automated vehicle inspection platform can boost your
+                    profitability, improve customer satisfaction, and unlock new revenue opportunities.</h3>
+                <button type="button" class="next-btn">Let's Get Started</button>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="step" data-step="1" style="display: none;">
+                <label for="roPerMonth">How many repair orders (ROs) do you get each month?</label>
+                <input type="number" id="roPerMonth" name="roPerMonth" placeholder="F.E 1000" required>
+                <button type="button" class="next-btn">Next (1/4)</button>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step" data-step="2" style="display: none;">
+                <label for="liabilityClaims">How much do you spend each month on policy claims for damages reported by
+                    your clients?</label>
+                <input type="number" id="liabilityClaims" name="liabilityClaims" placeholder="F.E 7000" required>
+                <button type="button" class="next-btn">Next (2/4)</button>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step" data-step="3" style="display: none;">
+                <label for="tradeIns">How many trade-ins and used vehicles do you get each month?</label>
+                <input type="number" id="tradeIns" name="tradeIns" placeholder="F.E 20" required>
+                <button type="button" class="next-btn">Next (3/4)</button>
+            </div>
+
+            <!-- Closing stage -->
+            <div class="step" data-step="5" style="display: none;">
+                <h3 class="sub-title">ROI values are based on average usage observed at partner dealerships. Actual
+                    results may vary depending on adoption and unique dealership conditions.</h3>
+                <label for="email" id="emailLabel">How can we get in touch?</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <button type="submit">Calculate</button>
+            </div>
+        </form>
+
+        <!-- Results -->
+        <div id="result" style="display: none;"></div>
+
+    </div>
+</body>
+
+</html>
