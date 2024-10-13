@@ -19,4 +19,4 @@ This version of the UVeye ROI Calculator is intended for **demonstration purpose
 - **CSS3**
 - **JavaScript ES6** 
   
-
+© 2024 Tal Argaman under UVeye Inc. All rights reserved.

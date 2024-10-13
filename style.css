@@ -161,7 +161,8 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+button:hover,
+button:disabled {
     color: #ec854d;
     background-color: #ffff;
     border-color: #ec854d;
@@ -193,6 +194,10 @@ h3 strong {
 
 /* Responsive */
 @media (max-width: 760px) {
+
+    .background-overlay {
+        background-position: 30%;
+    }
 
     body {
         padding: 1rem;
