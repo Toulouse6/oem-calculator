@@ -4,12 +4,12 @@ let currentStep = 0;
 
 // Background options
 const backgroundImages = [
-    "url('assets/volvo-bg.png')",   // Main
-    "url('assets/cb-bg.png')",      // Step 2
-    "url('assets/volvo-bg3.png')",   // Step 3
-    "url('assets/gm-bg.png')",      // Step 4
-    "url('assets/volvo-bg2.png')",  // Step 5
-    "url('assets/volvo-bg.png')"   // Result
+    "url('assets/bg3.png')",   // Main
+    "url('assets/bg6.png')",      // Step 2
+    "url('assets/bg8.png')",   // Step 3
+    "url('assets/bg7.png')",      // Step 4
+    "url('assets/bg5.png')",  // Step 5
+    "url('assets/bg9.png')"   // Result
 ];
 
 // Change the background
