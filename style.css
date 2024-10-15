@@ -182,6 +182,12 @@ button:disabled {
 
 /* Results */
 
+#result h2 {
+    padding-top: 10px;
+    font-size: xx-large;
+    text-transform: capitalize;
+}
+
 #result h3 {
     font-size: larger;
     color: #ec854d;
@@ -191,11 +197,14 @@ button:disabled {
 
 #result h4 {
     font-size: x-large;
-    color: #ec854d;
+    color: #000;
     font-weight: 600;
     margin-bottom: 0;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+    text-transform: capitalize;
+    background: rgba(255, 255, 255, 0.8);
+    line-height: 4rem;
+    text-align: center;
+    border-radius: 12px;
 }
 
 #result p {
@@ -208,7 +217,7 @@ button:disabled {
     background: rgba(7, 26, 39, 0.9);
     width: 600px;
     padding: 1rem 2rem 2rem 2rem;
-    margin: 6rem 2rem 3rem 3rem;
+    margin: 8rem 2rem 3rem 3rem;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     overflow: auto;
@@ -236,10 +245,10 @@ button:disabled {
     height: 35px;
     width: 35px;
     color: #ec854d;
-    padding: 2px 0 0 0;
+    padding: 5px 0 0 0;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .icon:hover {
@@ -303,8 +312,8 @@ button:disabled {
 
     form {
         max-width: 70%;
-        padding: 1rem;
-        margin: 2.5rem 0 1rem 0;
+        padding: 2rem;
+        margin: 2.5rem 2rem 2rem 3rem;
     }
 
     #result {
@@ -317,11 +326,11 @@ button:disabled {
     h1 {
         text-transform: capitalize;
         font-size: 1.8rem;
-        margin: 1rem 0.5rem;
+        margin: 1rem 1rem;
     }
 
     form h2 {
-        margin-top: -5px;
+        margin: -8px 0 30px 0;
     }
 
     input,
@@ -339,9 +348,9 @@ button:disabled {
     @media (max-width: 600px) {
 
         form {
-            max-width: 90%;
-            padding: 1rem;
-            margin: 2.5rem 0 1rem 0;
+            max-width: 80%;
+            padding: 2rem;
+            margin: 2.5rem 2rem 1rem 2rem;
         }
 
     }

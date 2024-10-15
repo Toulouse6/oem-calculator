@@ -131,7 +131,7 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
     <h2>Calculation Results</h2>
 
     <h4>Monthly ROI: ${monthlyROI.toFixed(2)}%</h4>
-    <p>UVeye's AI-driven imaging captures all vehicle damage, even without scheduled inspections, with comprehensive scans of the body, underbody, and tires.</p>
+    <p><b>UVeye's AI-driven imaging captures all vehicle damage, even without scheduled inspections, with comprehensive scans of the body, underbody, and tires.</b></p>
     <hr>
 
     <h3>Monthly Increase in ROs: $${monthlyPotentialIncreaseInROs.toFixed()}</h3>
@@ -152,7 +152,7 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
 
     <h4>Monthly Net Profit: $${monthlyPotentialNetProfit.toFixed()}</h4>
  
-    <p>UVeye identifies misalignments that are often missed by traditional lasers, opening up opportunities for services like wheel restoration and dent repair.</p>
+    <p><b>UVeye identifies misalignments that are often missed by traditional lasers, opening up opportunities for services like wheel restoration and dent repair.</b></p>
     `;
 
     // Show results after submission
