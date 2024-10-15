@@ -3,6 +3,7 @@
 }
 
 body {
+    display: flex;
     margin: 0;
     font-family: 'lato', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -46,8 +47,8 @@ body::before {
     display: flex;
     justify-content: space-between;
     align-items: top;
-    margin: auto;
-    padding: 2rem;
+    margin: 0rem -30rem 2rem 4rem;
+    padding: 6rem 30rem 2rem 2rem;
     position: relative;
     z-index: 1;
 }
@@ -81,7 +82,6 @@ form p {
     font-weight: 500;
     line-height: 1.5;
 }
-
 
 /* Form */
 
@@ -145,6 +145,13 @@ input[readonly] {
     display: none;
 }
 
+/* Hide spinner in number inputs */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 /* Button */
 button {
     width: 100%;
@@ -184,16 +191,82 @@ h3 strong {
     display: none;
     color: #ffff;
     background: rgba(40, 50, 57, 0.8);
-    max-width: 45%;
+    width: 600px;
     padding: 1rem 2rem 2rem 2rem;
-    margin: 2.5rem;
+    margin: 6rem 2rem 3rem 3rem;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     overflow: auto;
 }
 
+
+/* Social Section */
+
+#social-section {
+    display: none;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icon {
+    background-color: transparent;
+    border: 2px solid #ec854d;
+    align-items: center;
+    text-align: center;
+    border-radius: 100%;
+    height: 35px;
+    width: 35px;
+    color: #ec854d;
+    padding: 2px 0 0 0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.icon:hover {
+    background-color: #ec854d;
+    color: white;
+}
+
+
 /* Responsive */
-@media (max-width: 760px) {
+
+@media (max-width: 1200px) {
+
+    body {
+        display: block;
+    }
+
+    #calculator-body {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        justify-content: center;
+        margin: 0;
+        padding: 2rem;
+    }
+
+    #result {
+        width: 100%;
+        max-width: 500px;
+        justify-content: center;
+        padding: 1rem 2rem;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+
+
+}
+
+@media (max-width: 780px) {
 
     .background-overlay {
         background-position: 30%;
@@ -209,18 +282,20 @@ h3 strong {
         max-width: 100%;
         justify-content: center;
         margin: 1rem 0;
+        padding: 2rem;
     }
 
     form {
         max-width: 70%;
         padding: 1rem;
-        margin: 1rem 0;
+        margin: 2.5rem 0 1rem 0;
     }
 
     #result {
         max-width: 100%;
-        margin: 1rem 0;
+        margin: auto auto 3rem auto;
         padding: 2rem;
+        width: 480px;
     }
 
     h1 {
@@ -250,7 +325,7 @@ h3 strong {
         form {
             max-width: 90%;
             padding: 1rem;
-            margin: 1rem 0;
+            margin: 2.5rem 0 1rem 0;
         }
 
     }
