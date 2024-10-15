@@ -5,10 +5,10 @@ let currentStep = 0;
 // Background options
 const backgroundImages = [
     "url('assets/bg3.png')",   // Main
-    "url('assets/bg6.png')",      // Step 2
-    "url('assets/bg8.png')",   // Step 3
-    "url('assets/bg7.png')",      // Step 4
-    "url('assets/bg5.png')",  // Step 5
+    "url('assets/bg6.png')",      // Step 1
+    "url('assets/bg8.png')",   // Step 2
+    "url('assets/bg7.png')",      // Step 3
+    "url('assets/bg5.png')",  // Email
     "url('assets/bg9.png')"   // Result
 ];
 
