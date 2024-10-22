@@ -30,8 +30,8 @@
 
             <!-- Step 1 -->
             <div class="step" data-step="1" style="display: none;">
-                <label for="roPerMonth">How many repair orders (ROs) do you get each month?</label>
-                <input type="number" id="roPerMonth" name="roPerMonth" placeholder="F.E 1000" required>
+                <label for="roPerMonth">How many repair orders (ROs) do you get each day?</label>
+                <input type="number" id="roPerMonth" name="roPerMonth" placeholder="F.E 40" required>
                 <button type="button" class="next-btn">Next (1/3)</button>
             </div>
 
@@ -55,8 +55,13 @@
                 <h3 class="sub-title" id="disclaimer">ROI values are based on average usage observed at partner
                     dealerships.
                     Actual results may vary depending on adoption and unique dealership conditions.</h3>
-                <label for="email" id="emailLabel">How can we get in touch?</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <label id="contactLabel">Where would you like us to send your results?</label>
+                <input type="text" id="firstName" name="firstName" placeholder="First name">
+                <input type="text" id="lastName" name="lastName" placeholder="Last name">
+                <input type="text" id="company" name="company" placeholder="Company">
+                <input type="number" id="phone" name="phone" placeholder="Phone number">
+                <input type="email" id="email" name="email" placeholder="Email">
+
                 <button id="submit" type="submit">Calculate</button>
             </div>
 

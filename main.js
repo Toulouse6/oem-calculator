@@ -8,7 +8,7 @@ const backgroundImages = [
     "url('assets/bg6.png')",      // Step 1
     "url('assets/bg8.png')",   // Step 2
     "url('assets/bg7.png')",      // Step 3
-    "url('assets/bg5.png')",  // Email
+    "url('assets/bg5.png')",  // Contact
     "url('assets/bg9.png')"   // Result
 ];
 
@@ -23,7 +23,7 @@ function changeBackground(stepIndex) {
     setTimeout(() => {
         backgroundOverlay.style.backgroundImage = backgroundImages[stepIndex];
         backgroundOverlay.style.opacity = '1'; // Fade in
-    }, 1000); // Ensure background changes after fading out
+    }, 1000);
 }
 
 // Show current step and hide others
@@ -32,7 +32,12 @@ function showStep(stepIndex) {
         const inputs = step.querySelectorAll('input, select');
         if (index === stepIndex) {
             step.style.display = 'block'; // Show current step
-            inputs.forEach(input => input.required = true);
+            inputs.forEach(input => {
+                input.required = true; // Set required
+                if (input.id === 'phone') {
+                    input.required = false; // Keep phone optional
+                }
+            });
         } else {
             step.style.display = 'none'; // Hide other steps
             inputs.forEach(input => input.required = false);
@@ -78,7 +83,7 @@ document.getElementById('calculatorForm').addEventListener('keydown', function (
 
         inputs.forEach(input => {
             if (!input.checkValidity()) {
-                input.reportValidity(); // Trigger validation message
+                input.reportValidity(); // Trigger message
                 isValid = false;
             }
         });
@@ -98,8 +103,13 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
     document.getElementById('submit').style.display = 'none';
 
     // Input values
+    const firstName = document.getElementById('firstName')?.value || '';
+    const lastName = document.getElementById('lastName')?.value || '';
+    const company = document.getElementById('company')?.value || '';
+    const phone = document.getElementById('phone')?.value || '';
     const email = document.getElementById('email')?.value || '';
-    const roPerMonth = parseFloat(document.getElementById('roPerMonth')?.value || 0);
+    const contact = document.getElementById('contact')?.value || '';
+    const roPerMonth = parseFloat(document.getElementById('roPerMonth')?.value || 0) * 25;
     const liabilityClaims = parseFloat(document.getElementById('liabilityClaims')?.value || 0);
     const tradeIns = parseFloat(document.getElementById('tradeIns')?.value || 0);
     const avgRoIncrease = 25;
@@ -108,7 +118,7 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
     const monthlySubscription = 6100;
 
     // Number of scans needed (sum of RO + trade-ins, rounded up to the nearest 500)
-    const totalScans = Math.ceil((roPerMonth + tradeIns) / 500) * 500;
+    const totalScans = Math.max(1500, Math.ceil((roPerMonth + tradeIns) / 500) * 500);
 
     // Validate inputs before calculations
     if (!email || roPerMonth === 0) {
@@ -130,19 +140,19 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
 
     <h2>Calculation Results</h2>
 
-    <h4>Monthly ROI: ${monthlyROI.toFixed(2)}%</h4>
+    <h4>Estimated Monthly ROI: ${monthlyROI.toFixed(2)}%</h4>
     <p><b>UVeye's AI-driven imaging captures all vehicle damage, even without scheduled inspections, with comprehensive scans of the body, underbody, and tires.</b></p>
     <hr>
 
-    <h3>Monthly Increase in ROs: $${monthlyPotentialIncreaseInROs.toFixed()}</h3>
+    <h3>Estimated Monthly Increase in ROs: $${monthlyPotentialIncreaseInROs.toFixed()}</h3>
     <p>UVeye's precision scanning boosts repair revenue, adding an average of $25 per repair order by identifying and fixing typically missed damage.</p>
     <hr>
 
-    <h3>Savings in Claims: $${savingsInClaims.toFixed()}</h3>
+    <h3>Estimated Savings in Claims: $${savingsInClaims.toFixed()}</h3>
     <p>UVeye helps detect body and rim issues pre- and post-appointment, cutting false claims and reducing policy expenses by 70%.</p>
     <hr>
 
-    <h3>Savings in Trade-Ins: $${savingsInTradeIns.toFixed()}</h3>
+    <h3>Estimated Savings in Trade-Ins: $${savingsInTradeIns.toFixed()}</h3>
     <p>UVeye’s comprehensive appraisals reveal hidden damage without a lift, reducing trade-in offers by $500 on average and preventing unnecessary reconditioning costs.</p>
     <hr>
 
@@ -150,7 +160,7 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
     <p>UVeye recommends performing ${totalScans} full vehicle scans each month, based on your RO count and trade-ins.</p>
     <hr>
 
-    <h4>Monthly Net Profit: $${monthlyPotentialNetProfit.toFixed()}</h4>
+    <h4>Estimated Monthly Net Profit: $${monthlyPotentialNetProfit.toFixed()}</h4>
  
     <p><b>UVeye identifies misalignments that are often missed by traditional lasers, opening up opportunities for services like wheel restoration and dent repair.</b></p>
     `;
@@ -161,8 +171,12 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
 
     // Hide email, label & disclaimer
     document.getElementById('disclaimer').style.display = 'none';
+    document.getElementById('firstName').style.display = 'none';
+    document.getElementById('lastName').style.display = 'none';
+    document.getElementById('company').style.display = 'none';
+    document.getElementById('phone').style.display = 'none';
     document.getElementById('email').style.display = 'none';
-    document.getElementById('emailLabel').style.display = 'none';
+    document.getElementById('contactLabel').style.display = 'none';
 
     changeBackground(5);
 
@@ -170,6 +184,10 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
     // Prepare data for HubSpot submission
     let formData = {
         "fields": [
+            { "name": "firstName", "value": firstName },
+            { "name": "lastName", "value": lastName },
+            { "name": "company", "value": company },
+            { "name": "phone", "value": phone },
             { "name": "email", "value": email },
             { "name": "total_scans", "value": totalScans },
             { "name": "monthly_potential_increase_in_ros", "value": monthlyPotentialIncreaseInROs.toFixed(2) },
