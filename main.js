@@ -182,36 +182,36 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
 
 
     // Prepare data for HubSpot submission
-    let formData = {
-        "fields": [
-            { "name": "firstName", "value": firstName },
-            { "name": "lastName", "value": lastName },
-            { "name": "company", "value": company },
-            { "name": "phone", "value": phone },
-            { "name": "email", "value": email },
-            { "name": "total_scans", "value": totalScans },
-            { "name": "monthly_potential_increase_in_ros", "value": monthlyPotentialIncreaseInROs.toFixed(2) },
-            { "name": "savings_in_claims", "value": savingsInClaims.toFixed() },
-            { "name": "savings_in_trade_ins", "value": savingsInTradeIns.toFixed() },
-            { "name": "monthly_potential_net_profit", "value": monthlyPotentialNetProfit.toFixed() },
-            { "name": "monthly_roi", "value": monthlyROI.toFixed(2) }
-        ]
-    };
+    // let formData = {
+    //     "fields": [
+    //         { "name": "firstName", "value": firstName },
+    //         { "name": "lastName", "value": lastName },
+    //         { "name": "company", "value": company },
+    //         { "name": "phone", "value": phone },
+    //         { "name": "email", "value": email },
+    //         { "name": "total_scans", "value": totalScans },
+    //         { "name": "monthly_potential_increase_in_ros", "value": monthlyPotentialIncreaseInROs.toFixed(2) },
+    //         { "name": "savings_in_claims", "value": savingsInClaims.toFixed() },
+    //         { "name": "savings_in_trade_ins", "value": savingsInTradeIns.toFixed() },
+    //         { "name": "monthly_potential_net_profit", "value": monthlyPotentialNetProfit.toFixed() },
+    //         { "name": "monthly_roi", "value": monthlyROI.toFixed(2) }
+    //     ]
+    // };
 
-    // Send data to HubSpot
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://api.hsforms.com/submissions/v3/integration/submit/5004654/322950bd-00c9-4aa8-a220-107dfea7da0a", true);
-    xhr.setRequestHeader("Content-Type", "application/json");
+    // // Send data to HubSpot
+    // let xhr = new XMLHttpRequest();
+    // xhr.open("POST", "https://api.hsforms.com/submissions/v3/integration/submit/5004654/322950bd-00c9-4aa8-a220-107dfea7da0a", true);
+    // xhr.setRequestHeader("Content-Type", "application/json");
 
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            console.log('Form submitted successfully');
-        } else {
-            console.error('Error submitting form');
-            submitButton.disabled = false; // Re-enable if there was an error
-            submitButton.textContent = 'Calculate';
-        }
-    };
+    // xhr.onload = function () {
+    //     if (xhr.status === 200) {
+    //         console.log('Form submitted successfully');
+    //     } else {
+    //         console.error('Error submitting form');
+    //         submitButton.disabled = false; // Re-enable if there was an error
+    //         submitButton.textContent = 'Calculate';
+    //     }
+    // };
 
-    xhr.send(JSON.stringify(formData));
+    // xhr.send(JSON.stringify(formData));
 });
