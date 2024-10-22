@@ -182,46 +182,11 @@ button:disabled {
 
 /* Results */
 
-#result h2 {
-    padding-top: 10px;
-    font-size: xx-large;
-    text-transform: capitalize;
-}
-
-#result h3 {
-    font-size: larger;
-    color: #ec854d;
-    font-weight: 500;
-    padding-top: 8px;
-}
-
-#result h4 {
-    font-size: x-large;
-    color: #000;
-    font-weight: 600;
-    margin-bottom: 0;
-    text-transform: capitalize;
-    background: rgba(255, 255, 255, 0.8);
-    line-height: 4rem;
-    text-align: center;
-    border-radius: 8px;
-}
-
-#result p {
-    font-weight: 400;
-    line-height: 1.3;
-}
-
-#result b {
-    font-weight: 600;
-    line-height: 1.5;
-}
-
 #result {
     display: none;
     color: #ffff;
     background: rgba(7, 26, 39, 0.9);
-    width: 600px;
+    width: 700px;
     padding: 1rem 2rem 2rem 2rem;
     margin: 8rem 2rem 3rem 3rem;
     border-radius: 15px;
@@ -229,6 +194,48 @@ button:disabled {
     overflow: auto;
 }
 
+.resultBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    text-align: left;
+}
+
+#result h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+
+#result h3 {
+    margin-top: 25px;
+    font-size: 22px;
+    color: #ec854d;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+#result h4 {
+    font-size: 22px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    line-height: 1.4;
+    border-radius: 8px;
+}
+
+#result p {
+    font-weight: 500;
+    line-height: 1.3;
+    font-size: 15px;
+    margin-top: -10px;
+}
+
+#result b {
+    font-weight: 500;
+    line-height: 1.6;
+}
 
 /* Social Section */
 
@@ -362,11 +369,35 @@ button:disabled {
         }
 
 
+        /* Results */
+
+        .resultBox {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            text-align: left;
+        }
+
+        #result h2 {
+            margin-top: 22px;
+            font-size: 28px;
+            line-height: 1.4;
+        }
+
+        #result h3 {
+            font-size: large;
+        }
+
+        #result h4 {
+            font-size: large;
+        }
+
         #result p {
             font-weight: 400;
             line-height: 1.3;
-            margin: 1rem 1rem;
+            font-size: small;
         }
+
 
     }
 

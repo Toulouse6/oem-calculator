@@ -137,32 +137,34 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
 
     // Display results on the page
     document.getElementById('result').innerHTML = `
+<div class="resultBox">
+    <div class="primary">
+        <h2>Calculation Results</h2>
+  
+        <h4>Estimated Monthly ROI: ${monthlyROI.toFixed(2)}%</h4>
+        <p><b>UVeye's AI-driven imaging captures all vehicle damage, even without scheduled inspections, with comprehensive scans of the body, underbody, and tires.</b></p>
+        <hr>
 
-    <h2>Calculation Results</h2>
+        <h4>Estimated Monthly Net Profit: $${monthlyPotentialNetProfit.toFixed()}</h4>
+        <p><b>UVeye identifies misalignments that are often missed by traditional lasers, opening up opportunities for services like wheel restoration and dent repair.</b></p>
+    </div>
+    <div>
+        <h3>Estimated Monthly Increase in ROs: $${monthlyPotentialIncreaseInROs.toFixed()}</h3>
+        <p>UVeye's precision scanning boosts repair revenue, adding an average of $25 per repair order by identifying and fixing typically missed damage.</p>
+        <hr>
 
-    <h4>Estimated Monthly ROI: ${monthlyROI.toFixed(2)}%</h4>
-    <p><b>UVeye's AI-driven imaging captures all vehicle damage, even without scheduled inspections, with comprehensive scans of the body, underbody, and tires.</b></p>
-    <hr>
+        <h3>Estimated Savings in Claims: $${savingsInClaims.toFixed()}</h3>
+        <p>UVeye helps detect body and rim issues pre- and post-appointment, cutting false claims and reducing policy expenses by 70%.</p>
+        <hr>
 
-    <h3>Estimated Monthly Increase in ROs: $${monthlyPotentialIncreaseInROs.toFixed()}</h3>
-    <p>UVeye's precision scanning boosts repair revenue, adding an average of $25 per repair order by identifying and fixing typically missed damage.</p>
-    <hr>
+        <h3>Estimated Savings in Trade-Ins: $${savingsInTradeIns.toFixed()}</h3>
+        <p>UVeye’s comprehensive appraisals reveal hidden damage without a lift, reducing trade-in offers by $500 on average and preventing unnecessary reconditioning costs.</p>
+        <hr>
 
-    <h3>Estimated Savings in Claims: $${savingsInClaims.toFixed()}</h3>
-    <p>UVeye helps detect body and rim issues pre- and post-appointment, cutting false claims and reducing policy expenses by 70%.</p>
-    <hr>
-
-    <h3>Estimated Savings in Trade-Ins: $${savingsInTradeIns.toFixed()}</h3>
-    <p>UVeye’s comprehensive appraisals reveal hidden damage without a lift, reducing trade-in offers by $500 on average and preventing unnecessary reconditioning costs.</p>
-    <hr>
-
-    <h3>Total Monthly Scans Needed: ${totalScans}</h3>
-    <p>UVeye recommends performing ${totalScans} full vehicle scans each month, based on your RO count and trade-ins.</p>
-    <hr>
-
-    <h4>Estimated Monthly Net Profit: $${monthlyPotentialNetProfit.toFixed()}</h4>
- 
-    <p><b>UVeye identifies misalignments that are often missed by traditional lasers, opening up opportunities for services like wheel restoration and dent repair.</b></p>
+        <h3>Total Monthly Scans Needed: ${totalScans}</h3>
+        <p>UVeye recommends performing ${totalScans} full vehicle scans each month, based on your RO count and trade-ins.</p>
+    </div>
+</div>
     `;
 
     // Show results after submission
