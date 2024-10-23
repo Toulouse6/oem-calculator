@@ -211,7 +211,7 @@ button:disabled {
     width: 80%;
     margin: 25px auto;
     color: white;
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-align: center;
     font-size: 2.5rem;
     font-weight: 600;
@@ -448,7 +448,7 @@ button:disabled {
     #result {
         width: 100%;
         margin: 0;
-        padding: 1rem;
+        padding: 4rem 1.5rem;
     }
 
     #result h1 {
