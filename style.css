@@ -184,7 +184,7 @@ button:disabled {
     height: 100vh;
     color: #ffff;
     background: rgba(7, 26, 39, 0.9);
-    padding: 4rem 5rem;
+    padding: 0rem 5rem;
     margin: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     overflow: auto;
@@ -192,6 +192,15 @@ button:disabled {
     align-items: flex-start;
 
 }
+
+.result-header {
+    background: linear-gradient(to left, rgba(240, 244, 248, 0.7), rgba(214, 225, 230, 0));
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    align-items: start;
+}
+
 
 .result-box {
     width: 65%;
@@ -207,16 +216,24 @@ button:disabled {
     color: black;
     background: rgba(255, 255, 255, 1);
     margin: 8px 0;
-    border-radius: 8px;
-    padding: 20px 15px;
+    border-radius: 5px;
+    padding: 40px 15px;
 }
 
 .primary-result {
     color: black;
     background: rgba(255, 255, 255, 1);
-    border-radius: 8px;
+    border-radius: 5px;
     padding: 15px 30px;
+    margin-top: 8px;
 }
+
+
+.result-box {
+    width: 85%;
+    padding: 2.5rem 0 4rem 0;
+}
+
 
 #result h1 {
     width: 80%;
@@ -224,7 +241,7 @@ button:disabled {
     color: white;
     text-transform: capitalize;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 600;
     line-height: 1.3;
 }
@@ -343,8 +360,8 @@ button:disabled {
         overflow: auto;
         display: flex;
         text-align: center;
-        margin: 0 auto;
-        padding: 4rem;
+        margin: 0;
+        padding: 0;
     }
 
     .result-box {
@@ -379,7 +396,7 @@ button:disabled {
     #result {
         width: 100%;
         margin: 0;
-        padding: 2rem;
+        padding: 0;
     }
 
     form h1 {
@@ -412,7 +429,9 @@ button:disabled {
     .result-box {
         width: 90%;
         gap: 15px;
+        padding: 2.5rem 1rem 4rem 1rem;
     }
+
 
     #result h3 {
         font-size: 1.2rem;
@@ -456,17 +475,18 @@ button:disabled {
         grid-template-columns: 1fr 1fr;
         gap: 15px;
         width: 100%;
+        padding: 1rem;
         text-align: center;
     }
 
     #result {
         width: 100%;
         margin: 0;
-        padding: 1.5rem 1.5rem 5rem 1.5rem;
+        padding: 0;
     }
 
     #result h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
         line-height: 1.2;
     }
 
