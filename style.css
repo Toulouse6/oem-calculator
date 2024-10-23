@@ -475,7 +475,7 @@ button:disabled {
         grid-template-columns: 1fr 1fr;
         gap: 15px;
         width: 100%;
-        padding: 1rem;
+        padding: 1.5rem 1rem 4rem 1rem;
         text-align: center;
     }
 
