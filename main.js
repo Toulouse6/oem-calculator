@@ -149,16 +149,15 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
 
 <div class="result-box">
     <div class="primary">
+    <div class="primary-result">
         <h4>Estimated Monthly ROI:<br><b>${monthlyROIMultiplicationFormat}X</b></h4>
         <p><b>UVeye's AI-driven imaging captures all vehicle damage, even without scheduled inspections, with
                 comprehensive scans of the body, underbody, and tires.</b></p>
-        <hr>
 
-        <h4>Estimated Monthly Net Profit:<br><b>$${monthlyPotentialNetProfit.toFixed()}</b></h4>
+        <h4 class="net">Estimated Monthly Net Profit:<br><b>$${monthlyPotentialNetProfit.toFixed()}</b></h4>
         <p><b>UVeye identifies misalignments that are often missed by traditional lasers, opening up opportunities for
                 services like wheel restoration and dent repair.</b></p>
-        <hr>
-
+        </div>
         <div class="disclaimer-footer">
             <p>
                 UVeye's system doesn’t just prevent losses—it opens new opportunities. By providing dealerships with
@@ -189,21 +188,18 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
             <h3>Estimated Monthly Increase in ROs:<br><b>$${monthlyPotentialIncreaseInROs.toFixed()}</b></h3>
             <p>UVeye's precision scanning boosts repair revenue, adding an average of $25 per repair order by
                 identifying and fixing typically missed damage.</p>
-            <hr>
         </div>
 
         <div class="number-box">
             <h3>Estimated Savings in Claims:<br><b>$${savingsInClaims.toFixed()}</b></h3>
             <p>UVeye helps detect body and rim issues pre- and post-appointment, cutting false claims and reducing
                 policy expenses by 70%.</p>
-            <hr>
         </div>
 
         <div class="number-box">
             <h3>Estimated Savings in Trade-Ins:<br><b>$${savingsInTradeIns.toFixed()}</b></h3>
             <p>UVeye’s comprehensive appraisals reveal hidden damage without a lift, reducing trade-in offers by $500 on
                 average and preventing unnecessary reconditioning costs.</p>
-            <hr>
         </div>
 
         <div class="number-box">
