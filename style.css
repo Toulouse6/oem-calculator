@@ -70,7 +70,7 @@ form h2 {
 .disclaimer {
     font-size: 1.2rem;
     margin: 0 auto 20px auto;
-    width: 70%;
+    width: 65%;
     line-height: 1.5;
     text-align: center;
 }
@@ -448,7 +448,7 @@ button:disabled {
     #result {
         width: 100%;
         margin: 0;
-        padding: 2rem 1.5rem 5rem 1.5rem;
+        padding: 1.5rem 1.5rem 5rem 1.5rem;
     }
 
     #result h1 {
