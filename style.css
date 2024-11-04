@@ -625,6 +625,7 @@ button:disabled {
 
     .savingsBtn {
         font-size: 0.6rem !important;
+        letter-spacing: 1.5px;
     }
 
 }
