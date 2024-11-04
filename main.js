@@ -256,7 +256,7 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
     document.getElementById('result').innerHTML = `
 <div class="result-header">
     <h1>Here are your estimated results</h1>
-    <h5 class="disclaimer" id="disclaimer">ROI values are based on average usage observed at partner dealerships. Actual
+    <h5 class="disclaimer" id="disclaimer">ROI values are based on average usage observed at ${selectedOEM} dealerships. Actual
         results may vary depending on adoption and unique dealership conditions.</h5>
 </div>
 ${additional ? `<div id="additionalInfo"><h5>${additional}</h5></div>` : ""}
