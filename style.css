@@ -29,10 +29,16 @@ body::before {
     height: 100%;
     background-position: center;
     background-size: cover;
-    transition: opacity 1.5s ease-in-out, background-image 1.5s ease-in-out;
-    opacity: 1;
+    opacity: 0.8;
+    transition: opacity 0.5s ease-in-out;
     z-index: -1;
+    background-image: url('assets/volvo-bg.png');
 }
+
+.background-overlay.visible {
+    opacity: 1;
+}
+
 
 /* Calculator body */
 
@@ -62,7 +68,8 @@ form h1 {
 form h2 {
     text-align: center;
     font-weight: 500;
-    line-height: 1.4;
+    font-size: 1.8rem;
+    line-height: 1.2;
     margin-top: -25px;
     color: #141414;
 }
@@ -102,6 +109,8 @@ form h3 {
     font-weight: 500;
     border-spacing: 1rem;
     color: #000;
+    text-align: center;
+    line-height: 1.4;
 }
 
 form p {
@@ -136,16 +145,53 @@ select {
     margin-bottom: 10px;
 }
 
-/* Read-only */
-input[readonly] {
-    display: none;
-}
-
 /* Hide spinner in number inputs */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__clear {
+    display: none;
+}
+
+
+/* Custom styles for Select2 */
+.select2-container--default .select2-selection--single {
+    border: 1px solid #ec854d;
+    border-radius: 13px;
+    background-color: transparent;
+    color: #141414;
+    height: auto;
+    width: 100%;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 1.5;
+    padding: 0.5rem;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 100%;
+    right: 10px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #141414;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered,
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #141414;
+}
+
+.select2-container--default .select2-results__option {
+    color: #141414;
+}
+
+.select2-container--default .select2-selection--single:hover {
+    border-color: #ec854d;
 }
 
 /* Button */
@@ -231,9 +277,21 @@ button:disabled {
 
 .result-box {
     width: 85%;
-    padding: 2.5rem 0 4rem 0;
+    padding: 1rem 0 4rem 0;
 }
 
+#additionalInfo h5 {
+    font-size: 1.2rem;
+    margin: 1rem auto;
+    width: 100%;
+    line-height: 1.5;
+    font-weight: 600;
+    text-align: center;
+    color: black;
+    background: linear-gradient(to right, rgba(240, 244, 248, 0.7), rgba(214, 225, 230, 1));
+    border-radius: 5px;
+    padding: 2rem 6rem 2rem 6rem;
+}
 
 #result h1 {
     width: 80%;
@@ -277,11 +335,19 @@ button:disabled {
     border-radius: 8px;
 }
 
+.footerDiv .disclaimer-footer {
+    margin-top: 2.5rem;
+    text-align: left;
+    font-weight: 400;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
 #result p {
     font-weight: 400;
     line-height: 1.4;
     font-size: 1rem;
-    margin-top: -10px;
+    margin-top: -1rem;
 }
 
 #result p b {
@@ -294,14 +360,19 @@ button:disabled {
 
 /* Social Section */
 
+.footerDiv {
+    text-align: left;
+}
+
+.savingsBtn {
+    font-size: smaller !important;
+    line-height: 1.5;
+    width: 70%;
+}
+
 #social-section {
     display: none;
 
-}
-
-.disclaimer-footer {
-    margin-top: 4rem;
-    text-align: left;
 }
 
 .social-icons {
@@ -355,6 +426,18 @@ button:disabled {
         width: 95%;
     }
 
+    #additionalInfo h5 {
+        font-size: 1rem;
+        margin: 1rem auto;
+        width: 95%;
+        padding: 2rem 2rem 2rem 2rem;
+        
+    }
+
+    .footerDiv .disclaimer-footer {
+        margin-top: 2rem;
+    }
+
     #result {
         width: 100%;
         overflow: auto;
@@ -368,6 +451,10 @@ button:disabled {
         width: 85%;
     }
 
+    .savingsBtn {
+        width: 100%;
+        font-size: x-small;
+    }
 
 }
 
@@ -414,6 +501,12 @@ button:disabled {
         font-weight: 400;
     }
 
+    .footerDiv .disclaimer-footer {
+        margin-top: 2rem;
+        font-size: 0.8rem;
+    }
+
+
     input,
     select {
         padding: 0.4rem;
@@ -426,10 +519,17 @@ button:disabled {
         padding: 0.5rem;
     }
 
+    #additionalInfo h5 {
+        font-size: 0.9rem;
+        margin: 1rem auto;
+        width: 95%;
+        padding: 1rem 2rem 1rem 2rem;
+    }
+
     .result-box {
         width: 90%;
         gap: 15px;
-        padding: 2.5rem 1rem 4rem 1rem;
+        padding: 1rem 1rem 4rem 1rem;
     }
 
 
@@ -446,7 +546,12 @@ button:disabled {
         font-size: 1.5rem;
     }
 
+    .savingsBtn {
+        font-size: 0.7rem !important;
+    }
+
 }
+
 
 @media (max-width: 600px) {
 
@@ -469,13 +574,19 @@ button:disabled {
         width: 100%;
     }
 
+    #additionalInfo h5 {
+        font-size: 0.8rem;
+        margin: 1rem auto;
+        width: 95%;
+        padding: 1rem;
+    }
 
     .result-box {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 15px;
         width: 100%;
-        padding: 1.5rem 1rem 4rem 1rem;
+        padding: 0.5rem 1rem 3rem 1rem;
         text-align: center;
     }
 
@@ -504,8 +615,16 @@ button:disabled {
         font-weight: 400;
     }
 
+    .footerDiv .disclaimer-footer {
+        margin-top: 1.5rem;
+    }
+
     .social-icons {
         justify-content: left;
+    }
+
+    .savingsBtn {
+        font-size: 0.6rem !important;
     }
 
 }
