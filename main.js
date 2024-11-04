@@ -3,17 +3,17 @@ const steps = document.querySelectorAll('.step');
 let currentStep = 0;
 
 const oemValues = {
-    "Audi": { roCost: 60, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000, image: "assets/audi-bg.png", additional: "" },
+    "Audi": { roCost: 60, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000, image: "assets/audi-bg2.png", additional: "" },
     "Chevrolet": {
         roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500,
         image: "assets/chevy-bg.png",
         additional: "Chevrolet stores in the UVeye network have saved an average of $189,000 in reconditioning costs, increased vehicle acquisitions from 1-3 to 5-10 per month, and achieved a 30% average rise in gross profit per repair order. They've also seen a 119% increase in alignment sales revenue and reduced policy spending by approximately $4,000 per month after installing UVeye."
     },
-    "Ford": { roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "assets/ford-bg.png", additional: "" },
+    "Ford": { roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "assets/ford-bg2.png", additional: "" },
     "GMC": { roCost: 40, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/gmc-bg.png", additional: "" },
     "Cadillac": {
         roCost: 60, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000,
-        image: "assets/cadillac-bg.png",
+        image: "assets/cadillac-bg4.png",
         additional: "Cadillac stores within the UVeye network have experienced a 16% increase in average revenue, a 17% rise in average gross profit, and an additional $166,000 in monthly profits."
     },
     "Buick": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/buick-bg.png", additional: "" },
@@ -30,13 +30,13 @@ const oemValues = {
     },
     "BMW": {
         roCost: 60, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000,
-        image: "assets/bmw-bg.png",
+        image: "assets/bmw-bg2.png",
         additional: "BMW stores in the UVeye network have reported a 41% growth in alignment sales and a 25% increase in tire sales."
     },
     "Volkswagen": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/volkswagen-bg.png", additional: "" },
     "Porsche": {
         roCost: 70, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500,
-        image: "assets/porsche-bg.png",
+        image: "assets/porsche-bg2.png",
         additional: "Porsche stores in the UVeye network have achieved over $100,000 annually in policy savings."
     },
     "Toyota": {
@@ -60,7 +60,7 @@ const oemValues = {
     "Jaguar": { roCost: 70, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000, image: "assets/jaguar-bg.png", additional: "" },
     "Land Rover": {
         roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750,
-        image: "assets/land-rover-bg.png",
+        image: "assets/jlr-bg.png",
         additional: "Land Rover stores in the UVeye network have achieved an average increase of $340,000 in service sales, with a 34.7% rise in overall service sales. They’ve also seen a 25% average increase in RO counts for alignments, along with a reduction in service policy spending."
     },
     "Mini": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/mini-bg.png", additional: "" },

@@ -88,7 +88,7 @@ form {
     height: fit-content;
     padding: 1rem;
     max-width: 30rem;
-    margin: 50px auto 0 auto;
+    margin: 6rem auto 0 8rem;
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -415,7 +415,7 @@ button:disabled {
 
     #calculator-body {
         max-width: 100%;
-        justify-content: center;
+        justify-content: flex-start;
         margin: 0;
         height: 100%;
         padding: 0;
@@ -431,7 +431,7 @@ button:disabled {
         margin: 1rem auto;
         width: 95%;
         padding: 2rem 2rem 2rem 2rem;
-        
+
     }
 
     .footerDiv .disclaimer-footer {
@@ -468,7 +468,6 @@ button:disabled {
     #calculator-body {
         flex-direction: column;
         max-width: 100%;
-        justify-content: center;
         margin: 0;
         height: 100%;
         padding: 0;
@@ -477,7 +476,7 @@ button:disabled {
     form {
         max-width: 80%;
         padding: 2rem;
-        margin: 2.5rem 2rem 2rem 3rem;
+        margin: 8rem auto 0 auto;
     }
 
     #result {
@@ -558,7 +557,6 @@ button:disabled {
     form {
         max-width: 85%;
         padding: 2rem;
-        margin: 50px auto 0 auto;
     }
 
     .sub-title {
