@@ -278,7 +278,22 @@ ${additional ? `<div id="additionalInfo"><h5>⋆⋆ ${additional}</h5></div>` : 
                     dealership!</strong></h5>
             <button class="savingsBtn">See Your Savings in Action</button>
         </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/company/uveye/" class="icon" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/teamuveye/" class="icon" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/UVeye.Ltd/" class="icon" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.youtube.com/c/uveye/" class="icon" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
     </div>
+    <div>
     <div>
         <div class="number-box">
             <h3>Estimated Monthly Increase in ROs:<br><b>$${monthlyPotentialIncreaseInROs.toLocaleString()}</b></h3>
