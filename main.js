@@ -74,7 +74,7 @@ const oemValues = {
     "Bugatti": { roCost: 70, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000, image: "assets/bugatti-bg.png", additional: "" },
     "Rivian": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/rivian-bg.png", additional: "" },
     "Lucid": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/lucid-bg.png", additional: "" },
-    "Other": { roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "assets/default-bg.png", additional: "" }
+    "Other": { roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "assets/volvo-bg.png", additional: "" }
 };
 
 
@@ -113,7 +113,7 @@ $('#oem').on('change', function () {
             requestAnimationFrame(() => {
                 overlay.classList.add('visible');
             });
-        }, 1000); // Shorter delay for quicker transitions
+        }, 1200); // Shorter delay for quicker transitions
     }
 });
 
