@@ -329,7 +329,7 @@ button:disabled {
     text-align: center;
     color: white;
     border-radius: 15px;
-    padding: 2rem 8rem 2rem 8rem;
+    padding: 1rem 8rem 0 8rem;
 }
 
 #result h1 {
@@ -475,7 +475,7 @@ hr {
         font-size: 1rem;
         margin: 1rem auto;
         width: 95%;
-        padding: 2rem 2rem 2rem 2rem;
+        padding: 1rem 2rem 0rem 2rem;
 
     }
 
@@ -567,7 +567,7 @@ hr {
         font-size: 0.9rem;
         margin: 1rem auto;
         width: 95%;
-        padding: 1rem 2rem 1rem 2rem;
+        padding: 1rem 2rem 0 2rem;
     }
 
     .result-box {
@@ -620,7 +620,7 @@ hr {
 
     #additionalInfo h5 {
         font-size: 0.8rem;
-        margin: 1rem auto;
+        margin: 0.5rem auto;
         width: 95%;
         padding: 1rem;
     }
