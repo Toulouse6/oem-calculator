@@ -103,6 +103,7 @@ form h1 {
     font-weight: 600;
     line-height: 1.3;
     color: black;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 form h2 {
@@ -122,6 +123,15 @@ form h2 {
     font-weight: 600;
     text-align: center;
 }
+
+.disclaimer b {
+    text-transform: uppercase;
+}
+
+form label u {
+    text-decoration: underline;
+}
+
 
 form {
     width: 500px;
@@ -166,8 +176,8 @@ label {
     color: #000;
     text-align: left;
     display: block;
-    margin: 1rem auto;
-    font-size: 1rem;
+    margin: 1rem 0.5rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     font-weight: 600;
     letter-spacing: 1px;
@@ -236,7 +246,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .select2-search--dropdown .select2-search__field {
     padding: 5px 0 5px 15px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 /* Button */
@@ -346,6 +356,7 @@ button:disabled {
     font-size: 3rem;
     font-weight: 600;
     line-height: 1.3;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
 #result h3 {
@@ -361,6 +372,7 @@ button:disabled {
     margin-top: 25px;
     color: #ec854d;
     font-weight: 600;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     line-height: 1.8;
     font-size: 1.5rem;
 }

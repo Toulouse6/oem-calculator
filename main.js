@@ -113,11 +113,16 @@ $(document).ready(function () {
         }
     });
 
-    // Optional: Add focus effect to highlight placeholder
+    // Set placeholder text in Select2 search field
     $('#oem').on('select2:open', function () {
-        $('.select2-search__field').attr('placeholder', 'Search OEM...');
+        const searchField = document.querySelector('.select2-search__field');
+        if (searchField) {
+            searchField.placeholder = "Search an OEM...";
+            searchField.focus();
+        }
     });
 });
+
 
 
 // OEM select event + change backgrounds
@@ -271,10 +276,10 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
     document.getElementById('result').innerHTML = `
 <div class="result-header">
     <h1>Here are your estimated results</h1>
-    <h5 class="disclaimer" id="disclaimer">ROI values are based on average usage observed at ${selectedOEM} dealerships. Actual
+    <h5 class="disclaimer" id="disclaimer">ROI values are based on average usage observed at <b>${selectedOEM}</b> dealerships. Actual
         results may vary depending on adoption and unique dealership conditions.</h5>
 </div>
-${additional ? `<div id="additionalInfo"><h5>⋆⋆ ${additional}</h5></div>` : ""}
+${additional ? `<div id="additionalInfo"><h5>${additional}</h5></div>` : ""}
 <div class="result-box">
     <div class="primary">
         <div class="primary-result">
