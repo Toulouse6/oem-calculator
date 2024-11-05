@@ -234,6 +234,11 @@ input[type=number]::-webkit-outer-spin-button {
     border-color: #ec854d;
 }
 
+.select2-search--dropdown .select2-search__field {
+    padding: 5px 0 5px 15px;
+    font-size: 0.8rem;
+}
+
 /* Button */
 button {
     width: 100%;

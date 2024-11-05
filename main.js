@@ -108,11 +108,14 @@ $(document).ready(function () {
         width: '100%'
     }).on('change', function () {
         const selectedOEM = $(this).val();
-
-        // Update roPerMonth based on OEM
         if (oemValues[selectedOEM]) {
             document.getElementById('roPerMonth').value = oemValues[selectedOEM].cost;
         }
+    });
+
+    // Optional: Add focus effect to highlight placeholder
+    $('#oem').on('select2:open', function () {
+        $('.select2-search__field').attr('placeholder', 'Search OEM...');
     });
 });
 
