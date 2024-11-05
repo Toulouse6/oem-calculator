@@ -9,8 +9,8 @@ const oemValues = {
         image: "assets/chevy-bg.png",
         additional: "Chevrolet stores in the UVeye network have saved an average of $189,000 in reconditioning costs, increased vehicle acquisitions from 1-3 to 5-10 per month, and achieved a 30% average rise in gross profit per repair order. They've also seen a 119% increase in alignment sales revenue and reduced policy spending by approximately $4,000 per month after installing UVeye."
     },
-    "Ford": { roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "assets/ford-bg2.png", additional: "" },
-    "GMC": { roCost: 40, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/gmc-bg.png", additional: "" },
+    "Ford": { roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "assets/ford-bg3.png", additional: "" },
+    "GMC": { roCost: 40, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/gmc-bg4.png", additional: "" },
     "Cadillac": {
         roCost: 60, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000,
         image: "assets/cadillac-bg4.png",
@@ -33,10 +33,10 @@ const oemValues = {
         image: "assets/bmw-bg2.png",
         additional: "BMW stores in the UVeye network have reported a 41% growth in alignment sales and a 25% increase in tire sales."
     },
-    "Volkswagen": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/volkswagen-bg.png", additional: "" },
+    "Volkswagen": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/volkswagen-bg2.png", additional: "" },
     "Porsche": {
         roCost: 70, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500,
-        image: "assets/porsche-bg2.png",
+        image: "assets/porsche-bg4.png",
         additional: "Porsche stores in the UVeye network have achieved over $100,000 annually in policy savings."
     },
     "Toyota": {
@@ -56,7 +56,7 @@ const oemValues = {
     "Kia": { roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "assets/kia-bg.png", additional: "" },
     "Genesis": { roCost: 40, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 600, image: "assets/genesis-bg.png", additional: "" },
     "Volvo": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/volvo-bg.png", additional: "" },
-    "Polestar": { roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "assets/polestar-bg.png", additional: "" },
+    "Polestar": { roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "assets/polestar-bg4.png", additional: "" },
     "Jaguar": { roCost: 70, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000, image: "assets/jaguar-bg.png", additional: "" },
     "Land Rover": {
         roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750,
