@@ -38,9 +38,9 @@ const oemValues = {
         image: "assets/cadillac-bg4.png",
         additional: "Cadillac stores within the UVeye network have experienced a 16% increase in average revenue, a 17% rise in average gross profit, and an additional $166,000 in monthly profits."
     },
-    "Buick": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/buick-bg.png", additional: "" },
-    "Chrysler": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/chrysler-bg.png", additional: "" },
-    "Dodge": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/dodge-bg.png", additional: "" },
+    "Buick": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/polestar-bg3.png", additional: "" },
+    "Chrysler": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/gen-bg1.png", additional: "" },
+    "Dodge": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/gen-bg4.png", additional: "" },
     "Jeep": { roCost: 40, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/jeep-bg.png", additional: "" },
     "Ram": { roCost: 40, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/ram-bg.png", additional: "" },
     "Lincoln": { roCost: 60, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000, image: "assets/lincoln-bg.png", additional: "" },
@@ -79,7 +79,7 @@ const oemValues = {
     "Genesis": { roCost: 40, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 600, image: "assets/genesis-bg.png", additional: "" },
     "Volvo": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/volvo-bg.png", additional: "" },
     "Polestar": { roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "assets/polestar-bg4.png", additional: "" },
-    "Jaguar": { roCost: 70, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000, image: "assets/jaguar-bg.png", additional: "" },
+    "Jaguar": { roCost: 70, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000, image: "assets/jaguar-bg2.png", additional: "" },
     "Land Rover": {
         roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750,
         image: "assets/jlr-bg.png",
@@ -116,6 +116,7 @@ $(document).ready(function () {
     });
 });
 
+
 // OEM select event + change backgrounds
 $('#oem').on('change', function () {
     const selectedOEM = $(this).val();
@@ -128,7 +129,9 @@ $('#oem').on('change', function () {
         overlay.classList.remove('visible');
 
         setTimeout(() => {
+            // Set background default image fullback if image not found
             overlay.style.backgroundImage = `url(${image})`;
+            overlay.style.backgroundImage = `url(${image}), url('assets/polestar-bg3')`;
 
             requestAnimationFrame(() => {
                 overlay.classList.add('visible');
