@@ -131,7 +131,7 @@ $('#oem').on('change', function () {
         setTimeout(() => {
             // Set background default image fullback if image not found
             overlay.style.backgroundImage = `url(${image})`;
-            overlay.style.backgroundImage = `url(${image}), url('assets/polestar-bg3')`;
+            overlay.style.backgroundImage = `url(${image}), url('assets/polestar-bg3.png')`;
 
             requestAnimationFrame(() => {
                 overlay.classList.add('visible');
