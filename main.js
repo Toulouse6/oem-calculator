@@ -1,6 +1,28 @@
 // Handle steps
 const steps = document.querySelectorAll('.step');
+const progressBar = document.querySelector('.progress-bar');
+const progressSegmentsContainer = document.querySelector('.progress-segments');
 let currentStep = 0;
+
+// Create segment markers
+function createProgressSegments() {
+    const numberOfSteps = steps.length;
+    for (let i = 1; i < numberOfSteps; i++) {
+        const segment = document.createElement('div');
+        segment.classList.add('progress-segment');
+        progressSegmentsContainer.appendChild(segment);
+    }
+}
+
+// Initialize segments and bar on load
+createProgressSegments();
+updateProgressBar();
+
+function updateProgressBar() {
+    const progress = ((currentStep) / (steps.length - 1)) * 100;
+    progressBar.style.width = `${progress}%`;
+}
+
 
 const oemValues = {
     "Audi": { roCost: 60, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000, image: "assets/audi-bg2.png", additional: "" },
@@ -87,7 +109,7 @@ $(document).ready(function () {
     }).on('change', function () {
         const selectedOEM = $(this).val();
 
-        // Update the roPerMonth value based on selected OEM
+        // Update roPerMonth based on OEM
         if (oemValues[selectedOEM]) {
             document.getElementById('roPerMonth').value = oemValues[selectedOEM].cost;
         }
@@ -105,44 +127,31 @@ $('#oem').on('change', function () {
         // Fade out by removing 'visible'
         overlay.classList.remove('visible');
 
-        // Wait for fade-out transition and change background image
         setTimeout(() => {
             overlay.style.backgroundImage = `url(${image})`;
 
-            // Use requestAnimationFrame for a smoother re-add of 'visible'
             requestAnimationFrame(() => {
                 overlay.classList.add('visible');
             });
-        }, 1200); // Shorter delay for quicker transitions
+        }, 1200);
     }
 });
 
 
-
-
-// Show current step and hide others
+// Show current step and update progress bar
 function showStep(stepIndex) {
     steps.forEach((step, index) => {
-        const inputs = step.querySelectorAll('input, select');
-        if (index === stepIndex) {
-            step.style.display = 'block'; // Show current step
-            inputs.forEach(input => {
-                input.required = true; // Set required
-                if (input.id === 'phone') {
-                    input.required = false; // Keep phone optional
-                }
-            });
-        } else {
-            step.style.display = 'none'; // Hide other steps
-            inputs.forEach(input => input.required = false);
-        }
+        step.style.display = index === stepIndex ? 'block' : 'none';
     });
+    updateProgressBar();
 }
 
-// First step initially
+
+// Initial step and progress bar
 showStep(currentStep);
 
-// Next buttons
+
+// Next button handler
 document.querySelectorAll('.next-btn').forEach(button => {
     button.addEventListener('click', function () {
         const inputs = steps[currentStep].querySelectorAll('input, select');
@@ -150,7 +159,7 @@ document.querySelectorAll('.next-btn').forEach(button => {
 
         inputs.forEach(input => {
             if (!input.checkValidity()) {
-                input.reportValidity(); // Trigger message
+                input.reportValidity();
                 isValid = false;
             }
         });
@@ -158,7 +167,7 @@ document.querySelectorAll('.next-btn').forEach(button => {
         if (isValid) {
             currentStep++;
             if (currentStep < steps.length) {
-                showStep(currentStep); // Move to next step
+                showStep(currentStep);
             }
         }
     });
@@ -186,25 +195,25 @@ document.getElementById('calculatorForm').addEventListener('keydown', function (
 });
 
 document.getElementById('calculatorForm').addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent form submission
+    e.preventDefault(); // Prevent submission
 
     // Prevent multiple submissions
     document.getElementById('submit').style.display = 'none';
 
-    // Get user input
+    // Get OEM
     const selectedOEM = document.getElementById('oem').value;
 
-    // Check if the selected OEM has defined values in oemValues
+    // Check if selected OEM is defined
     if (!oemValues[selectedOEM]) {
         alert("Please select a valid OEM.");
         document.getElementById('submit').style.display = 'block';
         return;
     }
 
-    // Destructure values from the selected OEM in oemValues
+    // Destructure values
     const { roCost, avgPolicyClaimsReduction, avgSavingsInTradeIns, additional } = oemValues[selectedOEM];
 
-    // Validate if the required values are available
+    // Validate values
     if (roCost === undefined || avgPolicyClaimsReduction === undefined || avgSavingsInTradeIns === undefined) {
         alert("Some values for the selected OEM are missing.");
         document.getElementById('submit').style.display = 'block';
@@ -222,7 +231,7 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
     const liabilityClaims = Math.max(0, parseFloat(document.getElementById('liabilityClaims').value) || 0);
     const tradeIns = Math.max(0, parseFloat(document.getElementById('tradeIns').value) || 0);
 
-    // Monthly subscription costs based on total scans
+    // Subscription costs based on total scans
     const monthlySubscriptionCosts = {
         1500: 6300,
         2000: 6500,
@@ -266,7 +275,8 @@ ${additional ? `<div id="additionalInfo"><h5>⋆⋆ ${additional}</h5></div>` : 
             <h4>Estimated Monthly ROI:<br><b>${monthlyROI.toFixed(1)}X</b></h4>
             <p><b>UVeye's AI-driven imaging captures all vehicle damage, even without scheduled inspections, with
                     comprehensive scans of the body, underbody, and tires.</b></p>
-            <h4 class="net">Estimated Monthly Net Profit:<br><b>$${monthlyPotentialNetProfit.toLocaleString()}</b></h4>
+         <hr>
+                    <h4 class="net">Estimated Monthly Net Profit:<br><b>$${monthlyPotentialNetProfit.toLocaleString()}</b></h4>
             <p><b>UVeye identifies misalignments that are often missed by traditional lasers, opening up opportunities
                     for services like wheel restoration and dent repair.</b></p>
         </div>
@@ -319,7 +329,7 @@ ${additional ? `<div id="additionalInfo"><h5>⋆⋆ ${additional}</h5></div>` : 
 </div>
 `;
 
-    // Show results after submission
+    // Show results
     document.getElementById('result').style.display = 'block';
 
     // Hide form
