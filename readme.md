@@ -1,6 +1,6 @@
-# UVeye OEM ROI Calculator
+# UVeye ROI Calculator for Car Dealers
 
-This is a **dummy version** of the **UVeye ROI Calculator** that estimates the potential Return on Investment (ROI) for Automotive OEMs using UVeye's automated vehicle inspection platform. 
+This is a **dummy version** of the **UVeye ROI Calculator** that estimates the potential Return on Investment (ROI) for Automotive dealerships using UVeye's automated vehicle inspection platform. 
 
 **⚠️ Important: This Version does not include any real data.**
 
@@ -8,9 +8,9 @@ This version of the UVeye ROI Calculator is intended for **demonstration purpose
 
 ## How It Works
 
-1. Fill out the multi-step form, answering several questions related to your business.
-2. After submitting the form, an **ROI estimation** is displayed based on your OEM and inputs.
-3. In this version, the form does not send the data to any external service—everything happens locally in the browser.
+1. Complete the multi-step form, providing responses to business-related questions.
+2. Upon submission, an ROI estimation will be displayed based on the selected OEM and other inputs.
+3. This version processes everything locally within the browser, without sending data to any external service.
 
 
 ### Technologies Used
