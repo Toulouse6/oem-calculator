@@ -360,38 +360,42 @@ ${additional ? `<div id="additionalInfo"><h5>${additional}</h5></div>` : ""}
     // Hide form
     document.getElementById('calculatorForm').style.display = 'none';
 
-    // // Prepare data for HubSpot
-    // let formData = {
-    //     "fields": [
-    //         { "name": "firstName", "value": firstName },
-    //         { "name": "lastName", "value": lastName },
-    //         { "name": "company", "value": company },
-    //         { "name": "phone", "value": phone },
-    //         { "name": "email", "value": email },
-    //         { "name": "oem", "value": oem },
-    //         { "name": "total_scans", "value": totalScans },
-    //         { "name": "monthly_potential_increase_in_ros", "value": monthlyPotentialIncreaseInROs.toFixed(2) },
-    //         { "name": "savings_in_claims", "value": savingsInClaims.toFixed(2) },
-    //         { "name": "savings_in_trade_ins", "value": savingsInTradeIns.toFixed(2) },
-    //         { "name": "monthly_potential_net_profit", "value": monthlyPotentialNetProfit.toFixed(2) },
-    //         { "name": "monthly_roi", "value": monthlyROI.toFixed(1) }
-    //     ]
-    // };
 
-    // // Send data
-    // let xhr = new XMLHttpRequest();
-    // xhr.open("POST", "https://api.hsforms.com/submissions/v3/integration/submit/5004654/322950bd-00c9-4aa8-a220-107dfea7da0a", true);
-    // xhr.setRequestHeader("Content-Type", "application/json");
+    // Prepare data for HubSpot
+    let formData = {
 
-    // xhr.onload = function () {
-    //     if (xhr.status === 200) {
-    //         console.log('Form submitted successfully');
-    //     } else {
-    //         console.error('Error submitting form');
-    //         document.getElementById('submit').disabled = false; // Re-enable if there was an error
-    //         document.getElementById('submit').textContent = 'Calculate';
-    //     }
-    // };
+        "fields": [
+            { "name": "firstName", "value": firstName },
+            { "name": "lastName", "value": lastName },
+            { "name": "company", "value": company },
+            { "name": "phone", "value": phone },
+            { "name": "email", "value": email },
+            { "name": "oem", "value": selectedOEM },
+            { "name": "total_scans", "value": totalScans },
+            { "name": "monthly_potential_increase_in_ros", "value": monthlyPotentialIncreaseInROs.toFixed(2) },
+            { "name": "savings_in_claims", "value": savingsInClaims.toFixed(2) },
+            { "name": "savings_in_trade_ins", "value": savingsInTradeIns.toFixed(2) },
+            { "name": "monthly_potential_net_profit", "value": monthlyPotentialNetProfit.toFixed(2) },
+            { "name": "monthly_roi", "value": monthlyROI.toFixed(1) }
+        ]
+    };
 
-    // xhr.send(JSON.stringify(formData));
+    // Send data
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://api.hsforms.com/submissions/v3/integration/submit/5004654/322950bd-00c9-4aa8-a220-107dfea7da0a", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            console.log('Form submitted successfully');
+        } else {
+            console.error('Error submitting form');
+            document.getElementById('submit').disabled = false; // Re-enable if there was an error
+            document.getElementById('submit').textContent = 'Calculate';
+        }
+    };
+
+    xhr.send(JSON.stringify(formData));
+
+
 });
