@@ -124,7 +124,6 @@ $(document).ready(function () {
 });
 
 
-
 // OEM select event + change backgrounds
 $('#oem').on('change', function () {
     const selectedOEM = $(this).val();
@@ -136,15 +135,30 @@ $('#oem').on('change', function () {
         // Fade out by removing 'visible'
         overlay.classList.remove('visible');
 
-        setTimeout(() => {
-            // Set background default image fullback if image not found
-            overlay.style.backgroundImage = `url(${image})`;
-            overlay.style.backgroundImage = `url(${image}), url('assets/polestar-bg3.png')`;
+        // Preload the selected image
+        const tempImage = new Image();
+        tempImage.src = image;
+        tempImage.onload = () => {
+            setTimeout(() => {
+                // Set new background
+                overlay.style.backgroundImage = `url(${image})`;
 
-            requestAnimationFrame(() => {
-                overlay.classList.add('visible');
-            });
-        }, 1200);
+                // Fade in by adding 'visible'
+                requestAnimationFrame(() => {
+                    overlay.classList.add('visible');
+                });
+            }, 1200);
+        };
+
+        // Fallback default background if image fails
+        tempImage.onerror = () => {
+            setTimeout(() => {
+                overlay.style.backgroundImage = `url('assets/polestar-bg3.png')`;
+                requestAnimationFrame(() => {
+                    overlay.classList.add('visible');
+                });
+            }, 1200);
+        };
     }
 });
 
