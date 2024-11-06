@@ -397,6 +397,7 @@ button:disabled {
     font-weight: 400;
     line-height: 1.6;
     font-size: 1rem;
+    color: white;
 }
 
 #result p {

@@ -311,7 +311,7 @@ ${additional ? `<div id="additionalInfo"><h5>${additional}</h5></div>` : ""}
                 tire replacement, wheel realignment, and body repairs, resulting in a better customer experience and
                 stronger profitability. <strong>UVeye isn't just a service tool, it affects all aspects of a
                     dealership!</strong></h5>
-            <button class="savingsBtn">See Your Savings in Action</button>
+        <button class="savingsBtn" onclick="window.location.href='https://www.uveye.com/contact/'">See Your Savings in Action</button>
         </div>
         <div class="social-icons">
             <a href="https://www.linkedin.com/company/uveye/" class="icon" target="_blank" rel="noopener noreferrer">
