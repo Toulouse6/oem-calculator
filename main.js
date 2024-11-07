@@ -345,11 +345,6 @@ ${additional ? `<div id="additionalInfo"><h5>${additional}</h5></div>` : ""}
             <p>UVeye’s comprehensive appraisals reveal hidden damage without a lift, reducing trade-in offers by $${avgSavingsInTradeIns} on
                 average and preventing unnecessary reconditioning costs.</p>
         </div>
-        <div class="number-box">
-            <h3>Total Monthly Scans Needed:<br><b>${totalScans.toLocaleString()}</b></h3>
-            <p>UVeye recommends performing ${totalScans} full vehicle scans each month, based on your RO count and
-                trade-ins.</p>
-        </div>
     </div>
 </div>
 `;
