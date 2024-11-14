@@ -14,89 +14,90 @@ function createProgressSegments() {
     }
 }
 
-// Initialize segments and bar on load
-createProgressSegments();
-updateProgressBar();
-
+// Update progress bar
 function updateProgressBar() {
     const progress = ((currentStep) / (steps.length - 1)) * 100;
     progressBar.style.width = `${progress}%`;
 }
 
+// Initialize segments and bar
+createProgressSegments();
+updateProgressBar();
+
 
 const oemValues = {
-    "Audi": { roCost: 60, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000, image: "assets/audi-bg2.png", additional: "" },
+    "Audi": { avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000, image: "https://www.uveye.com/wp-content/uploads/2024/11/audi-bg2.png", additional: "" },
     "Chevrolet": {
-        roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500,
-        image: "assets/chevy-bg.png",
+        avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500,
+        image: "https://www.uveye.com/wp-content/uploads/2024/11/chevy-bg.png",
         additional: "Chevrolet stores in the UVeye network have saved an average of $189,000 in reconditioning costs, increased vehicle acquisitions from 1-3 to 5-10 per month, and achieved a 30% average rise in gross profit per repair order. They've also seen a 119% increase in alignment sales revenue and reduced policy spending by approximately $4,000 per month after installing UVeye."
     },
-    "Ford": { roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "assets/ford-bg3.png", additional: "" },
-    "GMC": { roCost: 40, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/gmc-bg4.png", additional: "" },
+    "Ford": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "https://www.uveye.com/wp-content/uploads/2024/11/ford-bg3.png", additional: "" },
+    "GMC": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "https://www.uveye.com/wp-content/uploads/2024/11/gmc-bg4.png", additional: "" },
     "Cadillac": {
-        roCost: 60, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000,
-        image: "assets/cadillac-bg4.png",
+        avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000,
+        image: "https://www.uveye.com/wp-content/uploads/2024/11/cadillac-bg4.png",
         additional: "Cadillac stores within the UVeye network have experienced a 16% increase in average revenue, a 17% rise in average gross profit, and an additional $166,000 in monthly profits."
     },
-    "Buick": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/polestar-bg3.png", additional: "" },
-    "Chrysler": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/gen-bg1.png", additional: "" },
-    "Dodge": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/gen-bg4.png", additional: "" },
-    "Jeep": { roCost: 40, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/jeep-bg.png", additional: "" },
-    "Ram": { roCost: 40, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/ram-bg.png", additional: "" },
-    "Lincoln": { roCost: 60, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000, image: "assets/lincoln-bg.png", additional: "" },
-    "Tesla": { roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "assets/tesla-bg.png", additional: "" },
+    "Buick": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "https://www.uveye.com/wp-content/uploads/2024/11/polestar-bg3.png", additional: "" },
+    "Chrysler": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "https://www.uveye.com/wp-content/uploads/2024/11/gen-bg1.png", additional: "" },
+    "Dodge": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "https://www.uveye.com/wp-content/uploads/2024/11/gen-bg4.png", additional: "" },
+    "Jeep": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "https://www.uveye.com/wp-content/uploads/2024/11/.png", additional: "" },
+    "Ram": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "https://www.uveye.com/wp-content/uploads/2024/11/ram-bg.png", additional: "" },
+    "Lincoln": { avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000, image: "https://www.uveye.com/wp-content/uploads/2024/11/lincoln-bg.png", additional: "" },
+    "Tesla": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "https://www.uveye.com/wp-content/uploads/2024/11/tesla-bg.png", additional: "" },
     "Mercedes-Benz": {
-        roCost: 70, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000,
-        image: "assets/mercedes-bg.png",
+        avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000,
+        image: "https://www.uveye.com/wp-content/uploads/2024/11/mercedes-bg.jpg",
         additional: "Mercedes-Benz stores in the UVeye network have experienced a 46% YoY increase in alignment sales and a 100% YoY rise in tire sales."
     },
     "BMW": {
-        roCost: 60, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000,
-        image: "assets/bmw-bg2.png",
+        avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1000,
+        image: "https://www.uveye.com/wp-content/uploads/2024/11/bmw-bg2.png",
         additional: "BMW stores in the UVeye network have reported a 41% growth in alignment sales and a 25% increase in tire sales."
     },
-    "Volkswagen": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/volkswagen-bg2.png", additional: "" },
+    "Volkswagen": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "https://www.uveye.com/wp-content/uploads/2024/11/volkswagen-bg2.png", additional: "" },
     "Porsche": {
-        roCost: 70, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500,
-        image: "assets/porsche-bg4.png",
+        avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500,
+        image: "https://www.uveye.com/wp-content/uploads/2024/11/porsche-bg4.png",
         additional: "Porsche stores in the UVeye network have achieved over $100,000 annually in policy savings."
     },
     "Toyota": {
-        roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500,
-        image: "assets/toyota-bg.png",
+        avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500,
+        image: "https://www.uveye.com/wp-content/uploads/2024/11/toyota-bg.png",
         additional: "Toyota stores in the UVeye network have reported a 100% increase in tire sales, a 50% rise in alignment sales, and over $30,000 in additional monthly revenue from collision work."
     },
-    "Lexus": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/lexus-bg.png", additional: "" },
-    "Honda": { roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "assets/honda-bg.png", additional: "" },
-    "Acura": { roCost: 40, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/acura-bg.png", additional: "" },
-    "Nissan": { roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "assets/nissan-bg.png", additional: "" },
-    "Infiniti": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/infiniti-bg.png", additional: "" },
-    "Subaru": { roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "assets/subaru-bg.png", additional: "" },
-    "Mazda": { roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "assets/mazda-bg.png", additional: "" },
-    "Mitsubishi": { roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "assets/mitsubishi-bg.png", additional: "" },
-    "Hyundai": { roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "assets/hyundai-bg.png", additional: "" },
-    "Kia": { roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "assets/kia-bg.png", additional: "" },
-    "Genesis": { roCost: 40, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/genesis-bg.png", additional: "" },
-    "Volvo": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/volvo-bg.png", additional: "" },
-    "Polestar": { roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "assets/polestar-bg4.png", additional: "" },
-    "Jaguar": { roCost: 70, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500, image: "assets/jaguar-bg2.png", additional: "" },
+    "Lexus": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "https://www.uveye.com/wp-content/uploads/2024/11/lexus-bg.png", additional: "" },
+    "Honda": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "https://www.uveye.com/wp-content/uploads/2024/11/honda-bg.png", additional: "" },
+    "Acura": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "https://www.uveye.com/wp-content/uploads/2024/11/acura-bg.png", additional: "" },
+    "Nissan": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "https://www.uveye.com/wp-content/uploads/2024/11/nissan-bg.png", additional: "" },
+    "Infiniti": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "https://www.uveye.com/wp-content/uploads/2024/11/infiniti-bg.png", additional: "" },
+    "Subaru": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "https://www.uveye.com/wp-content/uploads/2024/11/subaru-bg.png", additional: "" },
+    "Mazda": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "https://www.uveye.com/wp-content/uploads/2024/11/mazda-bg.png", additional: "" },
+    "Mitsubishi": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "https://www.uveye.com/wp-content/uploads/2024/11/mitsubishi-bg.png", additional: "" },
+    "Hyundai": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "https://www.uveye.com/wp-content/uploads/2024/11/hyundai-bg.png", additional: "" },
+    "Kia": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "https://www.uveye.com/wp-content/uploads/2024/11/kia-bg.png", additional: "" },
+    "Genesis": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "https://www.uveye.com/wp-content/uploads/2024/11/genesis-bg.png", additional: "" },
+    "Volvo": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "https://www.uveye.com/wp-content/uploads/2024/11/volvo-bg.png", additional: "" },
+    "Polestar": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "https://www.uveye.com/wp-content/uploads/2024/11/polestar-bg4.png", additional: "" },
+    "Jaguar": { avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500, image: "https://www.uveye.com/wp-content/uploads/2024/11/jaguar-bg2.png", additional: "" },
     "Land Rover": {
-        roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750,
-        image: "assets/jlr-bg.png",
+        avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750,
+        image: "https://www.uveye.com/wp-content/uploads/2024/11/jlr-bg.png",
         additional: "Land Rover stores in the UVeye network have achieved an average increase of $340,000 in service sales, with a 34.7% rise in overall service sales. They’ve also seen a 25% average increase in RO counts for alignments, along with a reduction in service policy spending."
     },
-    "Mini": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/mini-bg.png", additional: "" },
-    "Bentley": { roCost: 70, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500, image: "assets/bentley-bg.png", additional: "" },
-    "Rolls-Royce": { roCost: 70, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500, image: "assets/rolls-royce-bg.png", additional: "" },
-    "Aston Martin": { roCost: 70, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500, image: "assets/aston-martin-bg.png", additional: "" },
-    "Ferrari": { roCost: 70, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500, image: "assets/ferrari-bg.png", additional: "" },
-    "Maserati": { roCost: 70, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500, image: "assets/maserati-bg.png", additional: "" },
-    "Lamborghini": { roCost: 70, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500, image: "assets/lamborghini-bg.png", additional: "" },
-    "Alfa Romeo": { roCost: 70, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500, image: "assets/alfa-romeo-bg.png", additional: "" },
-    "Bugatti": { roCost: 70, avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500, image: "assets/bugatti-bg.png", additional: "" },
-    "Rivian": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/rivian-bg.png", additional: "" },
-    "Lucid": { roCost: 50, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "assets/lucid-bg.png", additional: "" },
-    "Other": { roCost: 30, avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "assets/volvo-bg.png", additional: "" }
+    "Mini": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "https://www.uveye.com/wp-content/uploads/2024/11/mini-bg.png", additional: "" },
+    "Bentley": { avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500, image: "https://www.uveye.com/wp-content/uploads/2024/11/bentley-bg.png", additional: "" },
+    "Rolls-Royce": { avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500, image: "https://www.uveye.com/wp-content/uploads/2024/11/rolls-royce-bg.png", additional: "" },
+    "Aston Martin": { avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500, image: "https://www.uveye.com/wp-content/uploads/2024/11/aston-martin-bg.png", additional: "" },
+    "Ferrari": { avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500, image: "https://www.uveye.com/wp-content/uploads/2024/11/ferrari-bg.png", additional: "" },
+    "Maserati": { avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500, image: "https://www.uveye.com/wp-content/uploads/2024/11/maserati-bg.png", additional: "" },
+    "Lamborghini": { avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500, image: "https://www.uveye.com/wp-content/uploads/2024/11/lamborghini-bg.png", additional: "" },
+    "Alfa Romeo": { avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500, image: "https://www.uveye.com/wp-content/uploads/2024/11/alfa-romeo-bg.png", additional: "" },
+    "Bugatti": { avgPolicyClaimsReduction: "80%", avgSavingsInTradeIns: 1500, image: "https://www.uveye.com/wp-content/uploads/2024/11/bugatti-bg.png", additional: "" },
+    "Rivian": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "https://www.uveye.com/wp-content/uploads/2024/11/rivian-bg.png", additional: "" },
+    "Lucid": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 750, image: "https://www.uveye.com/wp-content/uploads/2024/11/lucid-bg.png", additional: "" },
+    "Other": { avgPolicyClaimsReduction: "70%", avgSavingsInTradeIns: 500, image: "https://www.uveye.com/wp-content/uploads/2024/11/volvo-bg.png", additional: "" }
 };
 
 
@@ -109,7 +110,7 @@ $(document).ready(function () {
     }).on('change', function () {
         const selectedOEM = $(this).val();
         if (oemValues[selectedOEM]) {
-            document.getElementById('roPerMonth').value = oemValues[selectedOEM].cost;
+            document.getElementById('roPerDay').value = oemValues[selectedOEM].cost;
         }
     });
 
@@ -163,6 +164,7 @@ $('#oem').on('change', function () {
 });
 
 
+
 // Show current step and update progress bar
 function showStep(stepIndex) {
     steps.forEach((step, index) => {
@@ -183,6 +185,7 @@ document.querySelectorAll('.next-btn').forEach(button => {
         let isValid = true;
 
         inputs.forEach(input => {
+
             if (!input.checkValidity()) {
                 input.reportValidity();
                 isValid = false;
@@ -198,6 +201,7 @@ document.querySelectorAll('.next-btn').forEach(button => {
     });
 });
 
+
 // Enter key to move to next step
 document.getElementById('calculatorForm').addEventListener('keydown', function (e) {
     if (e.key === 'Enter') {
@@ -206,6 +210,7 @@ document.getElementById('calculatorForm').addEventListener('keydown', function (
         let isValid = true;
 
         inputs.forEach(input => {
+
             if (!input.checkValidity()) {
                 input.reportValidity(); // Trigger message
                 isValid = false;
@@ -228,22 +233,8 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
     // Get OEM
     const selectedOEM = document.getElementById('oem').value;
 
-    // Check if selected OEM is defined
-    if (!oemValues[selectedOEM]) {
-        alert("Please select a valid OEM.");
-        document.getElementById('submit').style.display = 'block';
-        return;
-    }
-
     // Destructure values
-    const { roCost, avgPolicyClaimsReduction, avgSavingsInTradeIns, additional } = oemValues[selectedOEM];
-
-    // Validate values
-    if (roCost === undefined || avgPolicyClaimsReduction === undefined || avgSavingsInTradeIns === undefined) {
-        alert("Some values for the selected OEM are missing.");
-        document.getElementById('submit').style.display = 'block';
-        return;
-    }
+    const { avgPolicyClaimsReduction, avgSavingsInTradeIns, additional } = oemValues[selectedOEM];
 
     // Input values
     const firstName = document.getElementById('firstName')?.value || '';
@@ -252,7 +243,7 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
     const phone = document.getElementById('phone')?.value || '';
     const email = document.getElementById('email')?.value || '';
 
-    const roPerDay = Math.max(0, parseFloat(document.getElementById('roPerMonth').value) || 0);
+    const roPerDay = Math.max(0, parseFloat(document.getElementById('roPerDay').value) || 0);
     const liabilityClaims = Math.max(0, parseFloat(document.getElementById('liabilityClaims').value) || 0);
     const tradeIns = Math.max(0, parseFloat(document.getElementById('tradeIns').value) || 0);
 
@@ -264,19 +255,36 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
         3000: 6900
     };
 
-    // Number of scans needed (rounded up to the nearest 500)
-    let totalScans = Math.max(1500, Math.min(3000, Math.ceil((roPerDay + tradeIns) / 500) * 500));
-    const scanCost = monthlySubscriptionCosts[totalScans] || monthlySubscriptionCosts[1500];
+    const roPerMonth = roPerDay * 25; // Convert daily ROs to monthly
 
-    // Validate inputs before calculations
-    if (!email || roPerDay === 0) {
-        alert('Please complete all required fields.');
-        document.getElementById('submit').style.display = 'block';
-        return;
+
+    // Calculate the total scans needed, rounding up to the nearest 500
+    let totalScans = Math.ceil((roPerMonth + tradeIns) / 500) * 500;
+
+    // Ensure totalScans is at least 1500 and at most 3000
+    if (totalScans < 1500) {
+        totalScans = 1500;
+    } else if (totalScans > 3000) {
+        totalScans = 3000;
     }
 
+    // Retrieve the scanCost
+    const scanCost = monthlySubscriptionCosts[totalScans];
+
+    console.log(`Selected OEM (Input): ${selectedOEM}`);
+
+    // OEM values
+    console.log(`Policy Claims Reduction (by OEM): ${avgPolicyClaimsReduction}`);
+    console.log(`Savings In Trade-Ins (by OEM): ${avgSavingsInTradeIns}`);
+    console.log(`Additional Info (by OEM): ${additional}`);
+
+    // User inputs values
+    console.log(`RO per Day (Input): ${roPerDay}`);
+    console.log(`Liability Claims (Input): ${liabilityClaims}`);
+    console.log(`Trade-Ins (Input): ${tradeIns}`);
+
     // Perform calculations
-    const monthlyPotentialIncreaseInROs = roCost * roPerDay * 25; // Monthly increase in ROs
+    const monthlyPotentialIncreaseInROs = roPerMonth; // Monthly increase in ROs
     const savingsInClaims = liabilityClaims * (parseFloat(avgPolicyClaimsReduction) / 100); // Savings in claims
     const savingsInTradeIns = tradeIns * avgSavingsInTradeIns; // Savings from trade-ins
 
@@ -285,6 +293,12 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
 
     // Monthly Potential Net Profit
     const monthlyPotentialNetProfit = monthlyPotentialIncreaseInROs + savingsInClaims + savingsInTradeIns - scanCost;
+
+    // Calculation values
+    console.log(`RO per Month: ${monthlyPotentialIncreaseInROs}`);
+    console.log(`Scan Cost (by total scans): ${scanCost}`);
+    console.log(`Total Scans: ${totalScans}`);
+
 
     // Results HTML
     document.getElementById('result').innerHTML = `
@@ -332,7 +346,7 @@ ${additional ? `<div id="additionalInfo"><h5>${additional}</h5></div>` : ""}
     <div>
         <div class="number-box">
             <h3>Estimated Monthly Increase in ROs:<br><b>$${monthlyPotentialIncreaseInROs.toLocaleString()}</b></h3>
-            <p>UVeye's precision scanning boosts repair revenue, adding an average of $${roCost} per repair order by
+            <p>UVeye's precision scanning boosts repair revenue, adding an average of $30 per repair order by
                 identifying and fixing typically missed damage.</p>
         </div>
         <div class="number-box">
@@ -351,46 +365,43 @@ ${additional ? `<div id="additionalInfo"><h5>${additional}</h5></div>` : ""}
 
     // Show results
     document.getElementById('result').style.display = 'block';
-
-    // Hide form
     document.getElementById('calculatorForm').style.display = 'none';
 
 
-    // Prepare data for HubSpot
-    let formData = {
+    // // Prepare data for HubSpot
+    // let formData = {
 
-        "fields": [
-            { "name": "firstName", "value": firstName },
-            { "name": "lastName", "value": lastName },
-            { "name": "company", "value": company },
-            { "name": "phone", "value": phone },
-            { "name": "email", "value": email },
-            { "name": "oem", "value": selectedOEM },
-            { "name": "total_scans", "value": totalScans },
-            { "name": "monthly_potential_increase_in_ros", "value": monthlyPotentialIncreaseInROs.toFixed(2) },
-            { "name": "savings_in_claims", "value": savingsInClaims.toFixed(2) },
-            { "name": "savings_in_trade_ins", "value": savingsInTradeIns.toFixed(2) },
-            { "name": "monthly_potential_net_profit", "value": monthlyPotentialNetProfit.toFixed(2) },
-            { "name": "monthly_roi", "value": monthlyROI.toFixed(1) }
-        ]
-    };
+    //     "fields": [
+    //         { "name": "firstName", "value": firstName },
+    //         { "name": "lastName", "value": lastName },
+    //         { "name": "company", "value": company },
+    //         { "name": "phone", "value": phone },
+    //         { "name": "email", "value": email },
+    //         { "name": "oem", "value": selectedOEM },
+    //         { "name": "total_scans", "value": totalScans },
+    //         { "name": "monthly_potential_increase_in_ros", "value": monthlyPotentialIncreaseInROs.toFixed(2) },
+    //         { "name": "savings_in_claims", "value": savingsInClaims.toFixed(2) },
+    //         { "name": "savings_in_trade_ins", "value": savingsInTradeIns.toFixed(2) },
+    //         { "name": "monthly_potential_net_profit", "value": monthlyPotentialNetProfit.toFixed(2) },
+    //         { "name": "monthly_roi", "value": monthlyROI.toFixed(1) }
+    //     ]
+    // };
 
-    // Send data
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://api.hsforms.com/submissions/v3/integration/submit/5004654/322950bd-00c9-4aa8-a220-107dfea7da0a", true);
-    xhr.setRequestHeader("Content-Type", "application/json");
+    // // Send data
+    // let xhr = new XMLHttpRequest();
+    // xhr.open("POST", "https://api.hsforms.com/submissions/v3/integration/submit/5004654/322950bd-00c9-4aa8-a220-107dfea7da0a", true);
+    // xhr.setRequestHeader("Content-Type", "application/json");
 
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            console.log('Form submitted successfully');
-        } else {
-            console.error('Error submitting form');
-            document.getElementById('submit').disabled = false; // Re-enable if there was an error
-            document.getElementById('submit').textContent = 'Calculate';
-        }
-    };
+    // xhr.onload = function () {
+    //     if (xhr.status === 200) {
+    //         console.log('Form submitted successfully');
+    //     } else {
+    //         console.error('Error submitting form');
+    //         document.getElementById('submit').disabled = false; // Re-enable if there was an error
+    //         document.getElementById('submit').textContent = 'Calculate';
+    //     }
+    // };
 
-    xhr.send(JSON.stringify(formData));
-
+    // xhr.send(JSON.stringify(formData));
 
 });
