@@ -257,7 +257,6 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
 
     const roPerMonth = roPerDay * 25; // Convert daily ROs to monthly
 
-
     // Calculate the total scans needed, rounding up to the nearest 500
     let totalScans = Math.ceil((roPerMonth + tradeIns) / 500) * 500;
 
@@ -269,7 +268,9 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
     }
 
     // Retrieve the scanCost
-    const scanCost = monthlySubscriptionCosts[totalScans];
+    const scansCost = monthlySubscriptionCosts[totalScans];
+
+    const avgGainPerRO = 30;
 
     console.log(`Selected OEM (Input): ${selectedOEM}`);
 
@@ -284,19 +285,20 @@ document.getElementById('calculatorForm').addEventListener('submit', function (e
     console.log(`Trade-Ins (Input): ${tradeIns}`);
 
     // Perform calculations
-    const monthlyPotentialIncreaseInROs = roPerMonth; // Monthly increase in ROs
+    const monthlyPotentialIncreaseInROs = roPerMonth * avgGainPerRO; // Monthly increase in ROs
     const savingsInClaims = liabilityClaims * (parseFloat(avgPolicyClaimsReduction) / 100); // Savings in claims
     const savingsInTradeIns = tradeIns * avgSavingsInTradeIns; // Savings from trade-ins
 
-    // Monthly ROI
-    const monthlyROI = (monthlyPotentialIncreaseInROs + savingsInClaims + savingsInTradeIns) / scanCost;
 
     // Monthly Potential Net Profit
-    const monthlyPotentialNetProfit = monthlyPotentialIncreaseInROs + savingsInClaims + savingsInTradeIns - scanCost;
+    const monthlyPotentialNetProfit = monthlyPotentialIncreaseInROs + savingsInClaims + savingsInTradeIns - scansCost;
+
+    // Monthly ROI
+    const monthlyROI = (monthlyPotentialIncreaseInROs + savingsInClaims + savingsInTradeIns) / scansCost;
 
     // Calculation values
     console.log(`RO per Month: ${monthlyPotentialIncreaseInROs}`);
-    console.log(`Scan Cost (by total scans): ${scanCost}`);
+    console.log(`Monthly Subscription Costs ${scansCost}`);
     console.log(`Total Scans: ${totalScans}`);
 
 
