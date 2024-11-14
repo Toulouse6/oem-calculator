@@ -570,7 +570,7 @@ hr {
 
 @media (max-width: 1024px) {
         .result-header {
-    padding: 6rem 0 1rem 0;
+    padding: 2rem 0 1rem 0;
 }
 }
 
@@ -602,7 +602,7 @@ hr {
     }
     
         .result-header {
-    padding: 4rem 0 1rem 0;
+    padding: 2rem 0 1rem 0;
 }
 
     form h1 {
