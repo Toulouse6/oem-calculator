@@ -309,7 +309,7 @@ button:disabled {
     overflow: auto;
     justify-content: flex-start;
     align-items: flex-start;
-
+    height: 100%;
 }
 
 .result-header {
