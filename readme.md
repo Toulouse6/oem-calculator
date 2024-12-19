@@ -5,8 +5,7 @@
 
 This is a **dummy version** of the **UVeye ROI Calculator** that estimates the potential Return on Investment (ROI) for Automotive dealerships using UVeye's automated vehicle inspection platform.
 <br><br>
-**⚠️ Important: This Version does not include any real data.**
-This version of the UVeye ROI Calculator is intended for **demonstration purposes**. No real data is transmitted, and the API integration is **disabled**.
+**⚠️ Important: This version of the UVeye ROI Calculator is intended for **demonstration purposes**. No real data is transmitted, and the API integration is disabled**.
 
 ---
 
