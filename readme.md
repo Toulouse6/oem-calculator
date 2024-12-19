@@ -1,7 +1,7 @@
 ## UVeye ROI Calculator for Car Dealers
 **© All rights reserved to UVeye INC.**
 
-<img align="right" src="calculator-main.png" alt="calculator-main" width="350">
+<img align="right" src="assets/calculator-main.png" alt="calculator-main" width="350">
 
 This is a **dummy version** of the **UVeye ROI Calculator** that estimates the potential Return on Investment (ROI) for Automotive dealerships, using UVeye's automated vehicle inspection platform.
 <br><br>
