@@ -17,11 +17,11 @@ This is a **dummy version** of the **UVeye ROI Calculator** that estimates the p
 
 **How It Works:**
 
-- **1. Complete the multi-step form, providing responses to business-related questions.
+**1. Complete the multi-step form, providing responses to business-related questions.
  
-- **2. Upon submission, an ROI estimation will be displayed based on the selected OEM and other inputs.
+**2. Upon submission, an ROI estimation will be displayed based on the selected OEM and other inputs.
 
-- **3. This version processes everything locally within the browser, without sending data to any external service.
+**3. This version processes everything locally within the browser, without sending data to any external service.
 
 ---
 
@@ -30,3 +30,4 @@ This is a **dummy version** of the **UVeye ROI Calculator** that estimates the p
 - **JavaScript ES6**
 - **CSS3**
 - **HTML5**
+- **WordPress**
